@@ -3138,7 +3138,11 @@ struct game_drawstate {
 };
 
 /* Outer margin around all four sides */
+#ifdef NARROW_BORDERS
+#define BORDER 0
+#else
 #define BORDER (tilesize/2)
+#endif
 
 /* Margin number clue row (below grid) and fleet */
 #define GUTTER (tilesize/2)
