@@ -1,3 +1,24 @@
+This is a fork of [x-sheep/puzzles-unreleased][upstream] used in [medmunds/puzzles-web][puzzles-web].
+
+Issues should be reported to:
+* The [puzzles-web] project if there is a problem with the integration into the PWA website
+* The [upstream] repo if there is a problem with (or enhancement request for) a specific puzzle
+
+If you're not sure, report it to [puzzles-web] only, and we'll figure it out from there.
+
+Review:
+* [Local modifications][compare-local] not in upstream
+* [Upstream updates][compare-upstream] not yet merged here
+
+[upstream]: https://github.com/x-sheep/puzzles-unreleased
+[puzzles-web]: https://github.com/medmunds/puzzles-web
+[compare-local]: https://github.com/x-sheep/puzzles-unreleased/compare/master...medmunds:puzzles-unreleased:puzzles-web
+[compare-upstream]: https://github.com/medmunds/puzzles-unreleased/compare/puzzles-web...x-sheep%3Apuzzles-unreleased%3Amaster
+
+The upstream readme follows...
+
+-----
+
 puzzles-unreleased
 ==================
 
