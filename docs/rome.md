@@ -19,6 +19,8 @@ Right-click and drag to place a pencil mark. Pencil marks can be used for any pu
 
 The keyboard can also be used. Move the cursor with the arrow keys, and press Enter followed with an arrow key to place an arrow. Use Space to add pencil marks. Alternatively, use the arrows on the numpad to enter arrows directly.
 
+Press the 'M' key to fill in a full set of pencil marks in every square that does not have a (non-pencil) arrow in it.
+
 ## Rome parameters
 
 These parameters are available from the ‘Custom…’ option on the ‘Type’ menu. 

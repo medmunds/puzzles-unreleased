@@ -14,7 +14,7 @@
  * The keyboard can also be used. Move the cursor with the arrow keys,
  * and press Enter followed with an arrow key to place an arrow. Use spacebar
  * to add pencil marks. Alternatively, use the arrows on the numpad to enter
- * arrows directly.
+ * arrows directly. Press 'M' to fill in all pencil marks.
  */
 
 /*
@@ -1734,6 +1734,21 @@ static char *interpret_move(const game_state *state, game_ui *ui, const game_dra
 		}
 	}
 	
+	if(button == 'M' || button == 'm')
+	{
+		int i;
+		bool found = false;
+		
+		for(i = 0; i < w*h; i++)
+		{
+			if(state->grid[i] == EMPTY && state->marks[i] != FM_ARROWMASK)
+				found = true;
+		}
+		
+		if(found)
+			return dupstr("M");
+	}
+	
 	return NULL;
 }
 
@@ -1839,6 +1854,18 @@ static game_state *execute_move(const game_state *oldstate, const char *move)
 		
 		state->completed = (rome_validate_game(state, true, NULL, NULL) == STATUS_COMPLETE);
 		state->cheated = state->completed;
+		return state;
+	}
+	
+	if(move[0] == 'M')
+	{
+		int i;
+		state = dup_game(oldstate);
+		for(i = 0; i < w*h; i++)
+		{
+			if(state->grid[i] == EMPTY)
+				state->marks[i] = FM_ARROWMASK;
+		}
 		return state;
 	}
 	
